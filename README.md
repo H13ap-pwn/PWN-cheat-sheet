@@ -65,6 +65,8 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # Ret2libc :
 
+- Nên thêm p64(ret) trước mỗi khi gọi hàm thuộc libc
+
 `got`: Nơi chứa địa chỉ hàm của libc
 
 `plt`: Thực thi hàm được chứa trong got
@@ -132,3 +134,5 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - Hủy các container :
 
 `sudo docker stop $(sudo docker ps -q)`
+
+# Lỗi XMM : Thêm p64(ret) giúp căn chỉnh thành chia hết 16
