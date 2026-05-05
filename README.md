@@ -120,3 +120,9 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 `from pwn import *`
 
 `print(asm("mov eax, 0xb", arch='i386').hex())`
+
+# Tạo sever local bằng Docker :
+
+`sudo docker build . -t <image_name>`
+
+`sudo docker run -d --rm -p <port>:<port> -it <container_name>`
