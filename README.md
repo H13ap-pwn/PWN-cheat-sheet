@@ -144,3 +144,5 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - `one_gadget = libc base + offset ( là số đầu tiên hiện ra tại mỗi gadget khi dùng tool` 
 
 - Để kiểm tra constraints thỏa mãn chưa : `Set breakpoints` tại one_gadget( là libc base + offset) rồi `info registers` check các thanh ghi và `vmmap` check các vùng có thể viết mà constraints yêu cầu
+
+# `info symbol <address>` Để check xem địa chỉ leak ra là của hàm nào
