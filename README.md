@@ -136,3 +136,11 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 `sudo docker stop $(sudo docker ps -q)`
 
 # Lỗi XMM : Thêm p64(ret) giúp căn chỉnh thành chia hết 16
+
+# One_gadget : Ưu tiên dùng, nếu ko được thì dùng ret2libc ( đều cần leak libc base)
+
+- one_gadget `/lib/x86_64-linux-gnu/libc.so.6` : Để tìm các gadget và constraints(điều kiện để nhảy đến gadget) có thể xài
+
+- `one_gadget = libc base + offset ( là số đầu tiên hiện ra tại mỗi gadget khi dùng tool` 
+
+- Để kiểm tra constraints thỏa mãn chưa : `Set breakpoints` tại one_gadget( là libc base + offset) rồi `info registers` check các thanh ghi và `vmmap` check các vùng có thể viết mà constraints yêu cầu
