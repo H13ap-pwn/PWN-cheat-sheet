@@ -161,6 +161,13 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - %p%p%p%p... = %<n>$p in ra % THỨ n
 
+- `for i in range(a, b)` : Vòng lặp chạy từ a đến b - 1
+
+- `f'...{i}...'` : f báo rằng chuỗi bên trong có thể nhét biến vào
+
+- `p.close()` : Đóng kết nối đến process
+
+
 - %<n>$n in ra % THỨ n
 
 - %<n>c = bình thường là in ra 1byte nhưng thêm 1 số n phía trước thì in ra n byte <padding>
