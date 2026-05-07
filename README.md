@@ -146,3 +146,23 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - Để kiểm tra constraints thỏa mãn chưa : `Set breakpoints` tại one_gadget( là libc base + offset) rồi `info registers` check các thanh ghi và `vmmap` check các vùng có thể viết mà constraints yêu cầu
 
 # `info symbol <address>` Để check xem địa chỉ leak ra là của hàm nào
+
+# FORMAT STRING :
+
+- %p in ra số tại thanh ghi đó luôn (cần truyền vào địa chỉ) <trái>
+
+- %c in ra 1byte số tại thanh ghi đó luôn (cần truyền vào biến thường) <trái>
+
+- %s in ra giá trị mà số tại thanh ghi trỏ tới đến khi gặp NULL Byte (cần truyền vào địa chỉ) <phải>
+
+- %n đếm số byte đã được in ra trước đó rồi ghi vào giá trị mà số tại thanh ghi đang trỏ tới <phải>
+
+- 64 bit khi không truyền đầu vào thì 5% đầu là 5 thanh ghi lần lượt là : rsi rdx rcx r8 r9, % thứ 6 là dữ liệu trên stack
+
+- %p%p%p%p... = %<n>$p in ra % THỨ n
+
+- %<n>$n in ra % THỨ n
+
+- %<n>c = bình thường là in ra 1byte nhưng thêm 1 số n phía trước thì in ra n byte <padding>
+
+## -> combo %c và %n kết hợp dạng rút gọn %<n>c%<m>$n : c sẽ tạo padding n byte và %n sẽ in ra n byte theo dạng hex tại % THỨ m
