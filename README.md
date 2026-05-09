@@ -160,3 +160,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - `[:n]` : Số dương bỏ n byte từ trái sang, số âm bỏ n byte từ phải sang
 
 <img width="1595" height="841" alt="image" src="https://github.com/user-attachments/assets/764b3bec-f6da-45ad-83e3-8259484f31d8" />
+
+- `p.recvuntil(b'...', drop=True)`: Nhận đến byte ... và bỏ đi byte ...
+
+- Chạy script thêm NOASLR để nó tĩnh hết để dễ dàng debug
