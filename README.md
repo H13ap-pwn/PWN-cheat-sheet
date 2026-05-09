@@ -151,9 +151,12 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - `p.close()` : Đóng kết nối đến process
 
-- `[:n]` : Số dương bỏ n byte từ trái sang, số âm bỏ n byte từ phải sang
 - %<n>$n in ra % THỨ n
 
 - %<n>c = bình thường là in ra 1byte nhưng thêm 1 số n phía trước thì in ra n byte <padding>
 
 ## -> combo %c và %n kết hợp dạng rút gọn %<n>c%<m>$n : c sẽ tạo padding n byte và %n sẽ in ra n byte theo dạng hex tại % THỨ m
+
+- `[:n]` : Số dương bỏ n byte từ trái sang, số âm bỏ n byte từ phải sang
+
+<img width="1595" height="841" alt="image" src="https://github.com/user-attachments/assets/764b3bec-f6da-45ad-83e3-8259484f31d8" />
