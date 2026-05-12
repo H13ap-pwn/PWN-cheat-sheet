@@ -172,3 +172,6 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - Hàm printf dừng khi gặp NULL byte vì vậy khi muốn gửi 1 địa chỉ lên stack để dùng formatstring thì payload sẽ gửi cuối bởi địa chị có dạng 0x00... có NULL byte ở cuối theo little endian, trước đó nên là formatstring để in ra chuỗi hoặc địa chỉ này sau <img width="432" height="95" alt="image" src="https://github.com/user-attachments/assets/c2a36418-21c6-46f0-ab1f-53aea551619c" />
 
+# ATTACK GOT : Khi RELRO tắt 
+
+
