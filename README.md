@@ -151,7 +151,11 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - `p.close()` : Đóng kết nối đến process
 
-- %<n>$n in ra % THỨ n
+- %<n>$n ghi vào số byte đã được in ra trước đó vào 4byte tại % THỨ n
+
+- %<n>$hn ghi vào số byte đã được in ra trước đó vào 2byte tại % THỨ n
+
+- %<n>$hhn ghi vào số byte đã được in ra trước đó vào 1byte tại % THỨ n
 
 - %<n>c = bình thường là in ra 1byte nhưng thêm 1 số n phía trước thì in ra n byte <padding>
 
