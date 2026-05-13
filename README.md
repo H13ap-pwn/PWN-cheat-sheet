@@ -194,4 +194,4 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
  <img width="1138" height="93" alt="image" src="https://github.com/user-attachments/assets/9567428c-3cad-42ae-ad40-933bd557ff67" />
 
-- Địa chỉ tại .fini_array = exe_base(Lấy ở chỗ address đặc biệt kia trỏ tới) + offset -> Overwrite địa chỉ mà address đặc biệt kia trỏ tới ko còn là exe_base mà thành địa chỉ khác + offset để điều hướng get_shell
+- Địa chỉ tại .fini_array = exe_base(Lấy ở chỗ address đặc biệt kia trỏ tới) + offset -> Overwrite địa chỉ mà address đặc biệt kia trỏ tới ko còn là exe_base mà thành địa chỉ khác + offset để điều hướng lấy get_shell
