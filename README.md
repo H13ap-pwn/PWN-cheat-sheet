@@ -178,4 +178,5 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - `<address> >> 8` : Dịch phải 8 bit
 
+- Overwrite GOT thằng sau format string
 
