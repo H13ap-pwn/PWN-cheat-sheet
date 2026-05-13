@@ -176,9 +176,9 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - `<address> & 0xff` : Giữ lại 1 byte cuối
 
-- `*` In ra số lượng padding < số lượng byte > đúng bằng con số mà nó đang trỏ tới
-
 - `<address> >> 8` : Dịch phải 8 bit
 
 - Overwrite GOT thằng sau format string
+
+- `*` In ra số lượng padding < số lượng byte > đúng bằng con số mà nó đang trỏ tới
 
