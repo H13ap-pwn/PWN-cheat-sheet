@@ -182,3 +182,9 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - `*` In ra số lượng padding < số lượng byte > đúng bằng con số mà nó đang trỏ tới, ví dụ `%*14$c%15$hn`
 
+# Khai thác .Fini_array :
+
+- Được gọi tự động sau khi chương trình main kết thúc, để dọn dẹp tài nguyên
+
+- Cơ chế hoạt động : Đọc địa chỉ mà nó chứa và gọi hàm tại địa chỉ nó chứa -> Có thể đổi địa chỉ nó chứa để getshell
+
