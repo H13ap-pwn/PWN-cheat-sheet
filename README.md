@@ -180,5 +180,5 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - Overwrite GOT thằng sau format string
 
-- `*` In ra số lượng padding < số lượng byte > đúng bằng con số mà nó đang trỏ tới
+- `*` In ra số lượng padding < số lượng byte > đúng bằng con số mà nó đang trỏ tới, ví dụ `%*14$c%15$hn`
 
