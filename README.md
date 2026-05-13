@@ -186,5 +186,12 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - Được gọi tự động sau khi chương trình main kết thúc, để dọn dẹp tài nguyên
 
-- Cơ chế hoạt động : Đọc địa chỉ mà nó chứa và gọi hàm tại địa chỉ nó chứa -> Có thể đổi địa chỉ nó chứa để getshell
+- Sẽ có 1 address đặc biệt trên stack( ở gần chỗ set biến môi trường, đặc điểm nhận dạng là địa chỉ giống libc nhưng ko phải libc, stack, binary mà sẽ nằm ở path file ld) sẽ trỏ tới địa chỉ exe_base (Như trong ảnh là dưới SHELL = bin/bash)
 
+<img width="2125" height="1004" alt="image" src="https://github.com/user-attachments/assets/ec0c9eea-8067-40cf-9275-6b734fc20a9a" />
+
+- `Info files` để tìm .fini_array :
+
+ <img width="1138" height="93" alt="image" src="https://github.com/user-attachments/assets/9567428c-3cad-42ae-ad40-933bd557ff67" />
+
+- Địa chỉ tại .fini_array = exe_base(Lấy ở chỗ address đặc biệt kia trỏ tới) + offset -> Overwrite địa chỉ mà address đặc biệt kia trỏ tới ko còn là exe_base mà thành địa chỉ khác + offset để điều hướng get_shell
