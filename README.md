@@ -147,7 +147,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - `for i in range(a, b)` : Vòng lặp chạy từ a đến b - 1
 
-- `f'...{i}...'` : f báo rằng chuỗi bên trong có thể nhét biến vào
+- `f'...{i}...'` : Ví dụ i = 9 thì nhúng giá trị `9` vào thay vì nhúng `i` như bình thường
 
 - `p.close()` : Đóng kết nối đến process
 
@@ -197,3 +197,18 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - Địa chỉ tại .fini_array = exe_base(Lấy ở chỗ address đặc biệt kia trỏ tới) + offset -> Overwrite địa chỉ mà address đặc biệt kia trỏ tới ko còn là exe_base mà thành địa chỉ khác + offset để điều hướng lấy get_shell
 
 - mấy bài `bof` chủ yếu là cơ chế nhảy thẳng nên cần địa chỉ code, nhưng mấy bài `fmtstr` như attack GOT, .fini_array thì cần địa chỉ chứa code, đọc nó rồi mới nhảy tới code ( cần con trỏ )
+
+- Cấu trúc `dictionary` của python :
+
+  package = {
+
+    key : value,
+
+    key : value,
+
+    key : value
+  }
+
+  - Muốn truy cập value thì `package[key]`
+
+  - `sorted` : sắp xếp của python 
