@@ -184,7 +184,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # Khai thác .Fini_array :
 
-- Được gọi tự động sau khi chương trình main kết thúc, để dọn dẹp tài nguyên
+- Mảng .fini_array(con trỏ hàm) được gọi tự động và lấy giá trị bên trong mảng là .fini_array[0] để nhảy tới đó sau khi chương trình main kết thúc, để dọn dẹp tài nguyên
 
 - Sẽ có 1 address đặc biệt trên stack( ở gần chỗ set biến môi trường, đặc điểm nhận dạng là địa chỉ giống libc nhưng ko phải libc, stack, binary mà sẽ nằm ở path file ld) sẽ trỏ tới địa chỉ exe_base (Như trong ảnh là dưới SHELL = bin/bash)
 
@@ -195,3 +195,5 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
  <img width="1138" height="93" alt="image" src="https://github.com/user-attachments/assets/9567428c-3cad-42ae-ad40-933bd557ff67" />
 
 - Địa chỉ tại .fini_array = exe_base(Lấy ở chỗ address đặc biệt kia trỏ tới) + offset -> Overwrite địa chỉ mà address đặc biệt kia trỏ tới ko còn là exe_base mà thành địa chỉ khác + offset để điều hướng lấy get_shell
+
+- mấy bài `bof` chủ yếu là cơ chế nhảy thẳng nên cần địa chỉ code, nhưng mấy bài `fmtstr` như attack GOT, .fini_array thì cần địa chỉ chứa code, đọc nó rồi mới nhảy tới code ( cần con trỏ )
