@@ -216,3 +216,14 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - các con trỏ stack có sẵn trên stack, ta có thể ghi thêm dữ liệu lên đó để có thể sử dụng và tạo thành một chuỗi format string `ghi đè` lên nhau và để chuẩn xác phải kết hợp `fullform` ghi trước rồi mới tới `shortform`
 
  <img width="1557" height="128" alt="image" src="https://github.com/user-attachments/assets/c7d9b116-e666-42af-b783-d66c2e2f93a9" />
+
+# Interger Overflow :
+
+### Số có dấu :
+- bit 1 ở đầu được bật là số âm
+
+- bit 0 ở đầu là số dương
+
+- number < `0x7f` : là số dương
+
+- number > `0x80` : là số âm
