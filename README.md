@@ -209,6 +209,10 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
     key : value
   }
 
-  - Muốn truy cập value thì `package[key]`
+- Muốn truy cập value thì `package[key]`
 
-  - `sorted` : sắp xếp của python 
+- `sorted` : sắp xếp của python 
+
+- các con trỏ stack có sẵn trên stack, ta có thể ghi thêm dữ liệu lên đó để có thể sử dụng và tạo thành một chuỗi format string `ghi đè` lên nhau và để chuẩn xác phải kết hợp `fullform` ghi trước rồi mới tới `shortform`
+
+ <img width="1557" height="128" alt="image" src="https://github.com/user-attachments/assets/c7d9b116-e666-42af-b783-d66c2e2f93a9" />
