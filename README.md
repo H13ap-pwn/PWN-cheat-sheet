@@ -227,3 +227,11 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - number < `0x7f` : là số dương
 
 - number > `0x80` : là số âm
+
+# SROP :
+
+- flag : nối nhiều payload lại và chuyển thành byte
+
+- `frame = SigreturnFrame()` : Tạo struct với các thanh ghi dùng để setup
+
+- `frame.<thanhghi> = ...` : setup thanh ghi
