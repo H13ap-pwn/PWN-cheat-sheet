@@ -230,6 +230,8 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # SROP :
 
+- syscall number rax = 0xf
+
 - flag : nối nhiều payload lại và chuyển thành byte
 
 - `frame = SigreturnFrame()` : Tạo struct với các thanh ghi dùng để setup
