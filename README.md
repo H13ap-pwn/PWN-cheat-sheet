@@ -242,6 +242,8 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - Nhập vào số âm nằm ngoài mảng có thể truy cập dữ liệu ở trước nó
 
-# Seccomp :
+# Seccomp : Giới hạn 1 số syscall
 
 - Trong gdb nhập call (int)mprotect(exe_base, offset, 7) 7 là quyền rwx trước khi thực thi seccomp
+
+- `seccomp-tools dump ./<file>` : Để kiểm tra seccomp
