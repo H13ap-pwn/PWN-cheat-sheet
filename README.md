@@ -235,3 +235,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - `frame = SigreturnFrame()` : Tạo struct với các thanh ghi dùng để setup
 
 - `frame.<thanhghi> = ...` : setup thanh ghi
+
+# Out of bound :
+
+- Nhập vào số âm nằm ngoài mảng có thể truy cập dữ liệu ở trước nó
