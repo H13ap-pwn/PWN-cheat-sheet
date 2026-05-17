@@ -247,3 +247,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - Trong gdb nhập call (int)mprotect(exe_base, offset, 7) 7 là quyền rwx trước khi thực thi seccomp
 
 - `seccomp-tools dump ./<file>` : Để kiểm tra seccomp
+
+# Hook : 
+
+- __free_hook, __malloc_hook
