@@ -6,6 +6,8 @@
 
 `search-pattern <chuỗi>` : Tìm chuỗi( ví dụ chuỗi /bin/sh)
 
+# PWNDBG : Dù file có bị stripped<ẩn hàm> thì vào gdb vẫn hiện
+
 # PWNtool: < Viết script, payload >
 
 * Để debug động `python3 ten.py` ( Chạy cái script ) vừa viết ở trên rồi copy pid <img width="856" height="71" alt="image" src="https://github.com/user-attachments/assets/64f28201-0e4d-414c-9fee-ae38990bec93" />
