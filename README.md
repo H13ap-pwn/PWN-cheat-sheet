@@ -257,3 +257,9 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 # Race condition :
 
 - Xảy ra 2 tiến trình cùng truy cập vào 1 biến dùng chung, ví dụ hàm 1 gọi hàm chứa biến x và biến x vẫn đang trong tiến trình, thì có hàm 2 cũng gọi biến x --> getshell
+
+# Khi gặp file stripped để map hàm từ ida vào gdb : 
+
+- di setpath /mnt/d/đường/dẫn/tới/chall_mới
+
+- decompiler-integration connect
