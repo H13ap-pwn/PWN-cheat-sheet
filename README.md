@@ -263,3 +263,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - di setpath /mnt/d/đường/dẫn/tới/chall_mới
 
 - decompiler-integration connect
+
+# BASE64 ENCODE :
+
+- biến 8bit thông thường thành 6bit rồi so nó bảng mã base64 để chuyển thành kí tự đó, nếu tổng số bit mà ko chia hết cho 6 thì bit dư tự biến thành dấu `=`
