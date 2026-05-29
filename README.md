@@ -84,10 +84,6 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # Stack pivot đổi biến :
 
-- `int(data, 16)` dùng cho hexstring
-
-- `u64(data)` dùng cho raw byte
-
 - Khi trở về hàm cha saved RBP của hàm con sẽ trở lại thành RBP hàm cha
 
 # So sánh 32bit & 64bit
