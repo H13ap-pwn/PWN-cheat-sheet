@@ -265,3 +265,4 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - biến 8bit thông thường thành 6bit rồi so nó bảng mã base64 để chuyển thành kí tự đó, nếu tổng số bit mà ko chia hết cho 6 thì bit dư tự biến thành dấu `=`
 
 # Khi shellcode ko chạy được -> thêm ở đầu `sub rsp, 0x200` hoặc bao nhiêu đấy, % 16 == 0 càng tốt hoặc dùng trick lỏ `shellcode = asm(shellcraft.sh())`(dùng cho mấy shellcode đơn giản)
+
