@@ -276,3 +276,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 - `$(...)` : Lấy output của lệnh trong ngaoawjc làm input | ví dụ : `echo $(whoami) = echo ubuntu`
 
 - `${IFS}` : Thay thế cho khoảng trắng mà ko bị tính là khoảng trắng, bị chắn | ví dụ : scanf gặp khoảng trắng là dừng nhưng muốn nó nhận tất thì ta có thể : `cat{IFS}flag`
+
+# Leak libc từ Dockerfile :
+
+- build & run docker -> `sudo docker ps -a`( Lấy id ) -> `sudo docker cp -L <id> :/usr/lib/x86_64-linux-gnu/libc.so.6`
