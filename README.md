@@ -259,3 +259,14 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # Khi shellcode ko chạy được -> thêm ở đầu `sub rsp, 0x200` hoặc bao nhiêu đấy, % 16 == 0 càng tốt hoặc dùng trick lỏ `shellcode = asm(shellcraft.sh())`(dùng cho mấy shellcode đơn giản)
 
+# Rand() : Có thể predict bằng cách : 
+
+- `import ctypes, time`
+
+- `libc = ctypes.CDLL("libc.so.6")`: Load file libc hệ thống để dùng hàm random của C (khác random của python)
+
+- `seed = int(time.time())`: seed "hạt giống" như kiểu 1 thứ để `srand()` dựa vào để random mà `time` kia trả về số giây từ 1970 đến nay, thường dùng làm seed
+
+- `libc.srand(seed)` : Khởi tạo seed
+
+- `libc.rand()` : Khi đó giống với chương trình nếu cùng seed (time(nullptr))
