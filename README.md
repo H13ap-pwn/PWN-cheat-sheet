@@ -273,6 +273,6 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # Bypass filter Command Injection : 
 
-- `$(...)` : Giúp thực hiện lệnh trong ngoặc trước | ví dụ : `echo $(whoami) = echo ubuntu`
+- `$(...)` : Lấy output của lệnh trong ngaoawjc làm input | ví dụ : `echo $(whoami) = echo ubuntu`
 
 - `${IFS}` : Thay thế cho khoảng trắng mà ko bị tính là khoảng trắng, bị chắn | ví dụ : scanf gặp khoảng trắng là dừng nhưng muốn nó nhận tất thì ta có thể : `cat{IFS}flag`
