@@ -283,4 +283,4 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # Gặp các bài chặn một số byte của shellcode : 
 
-- Dùng lệnh `print(asm("code shellcode").hex())` để chuyển thành byte thô rồi so với các byte bị chặn -> biết lệnh nào bị chặn -> fix lệnh đó
+- Vào `python3` -> `context.arch = 'amd64'` -> `print(asm("code shellcode").hex())` để chuyển thành byte thô rồi so với các byte bị chặn -> biết lệnh nào bị chặn -> fix lệnh đó
