@@ -280,3 +280,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 # Leak libc từ Dockerfile :
 
 - build & run docker -> `sudo docker ps -a`( Lấy id ) -> `sudo docker cp -L <id> :/usr/lib/x86_64-linux-gnu/libc.so.6`
+
+# Gặp các bài chặn một số byte của shellcode : 
+
+- Dùng lệnh `print(asm("code shellcode").hex())` để chuyển thành byte thô rồi so với các byte bị chặn -> biết lệnh nào bị chặn -> fix lệnh đó
