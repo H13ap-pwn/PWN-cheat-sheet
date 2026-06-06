@@ -114,7 +114,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # One_gadget : Ưu tiên dùng, nếu ko được thì dùng ret2libc ( đều cần leak libc base)
 
-- one_gadget `/lib/x86_64-linux-gnu/libc.so.6` : Để tìm các gadget và constraints(điều kiện để nhảy đến gadget) có thể xài
+- one_gadget `"đường dẫn tuyệt đối tới libc"` : Để tìm các gadget và constraints(điều kiện để nhảy đến gadget) có thể xài
 
 - `one_gadget = libc base + offset ( là số đầu tiên hiện ra tại mỗi gadget khi dùng tool` 
 
