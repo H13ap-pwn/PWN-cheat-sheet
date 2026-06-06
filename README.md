@@ -279,7 +279,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # Leak libc từ Dockerfile :
 
-- build & run docker -> `sudo docker ps -a`( Lấy id ) -> `sudo docker cp -L <id> :/usr/lib/x86_64-linux-gnu/libc.so.6`
+- build & run docker -> `sudo docker ps -a`( Lấy id ) -> `sudo docker cp -L <id>:/usr/lib/x86_64-linux-gnu/libc.so.6 .`
 
 # Gặp các bài chặn một số byte của shellcode : 
 
