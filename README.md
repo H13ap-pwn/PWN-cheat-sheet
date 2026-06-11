@@ -223,11 +223,14 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - syscall number rax = 0xf
 
-- flag : nối nhiều payload lại và chuyển thành byte
+- flat : nối nhiều payload lại và chuyển thành byte
 
 - `frame = SigreturnFrame()` : Tạo struct với các thanh ghi dùng để setup
 
 - `frame.<thanhghi> = ...` : setup thanh ghi
+
+<img width="561" height="534" alt="image" src="https://github.com/user-attachments/assets/0cc95ebc-9c2b-4a1a-95bd-6e63329b5c82" />
+
 
 # Out of bound :
 
