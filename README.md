@@ -6,6 +6,7 @@
 
 `search-pattern <chuỗi>` : Tìm chuỗi( ví dụ chuỗi /bin/sh)
 
+`set $rip = ...` : Để nhảy tới lệnh ... bỏ qua các lệnh trước nó
 
 # PWNtool: < Viết script, payload >
 
