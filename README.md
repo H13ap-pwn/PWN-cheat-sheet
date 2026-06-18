@@ -8,19 +8,6 @@
 
 `set $rip = ...` : Để nhảy tới lệnh ... bỏ qua các lệnh trước nó
 
-# PWNtool: < Viết script, payload >
-
-* Để debug động `python3 ten.py` ( Chạy cái script ) vừa viết ở trên rồi copy pid <img width="856" height="71" alt="image" src="https://github.com/user-attachments/assets/64f28201-0e4d-414c-9fee-ae38990bec93" />
-sau đó qua tab wsl khác mở gdb rồi attach pid <img width="1257" height="525" alt="image" src="https://github.com/user-attachments/assets/3a952b07-2189-47f3-a61a-3752ad8af106" />
-xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab wsl vừa viết script xong enter để bắt đầu payload rồi dữ liệu được gửi vào gdb
-
-<img width="787" height="125" alt="image" src="https://github.com/user-attachments/assets/9f9ebac7-6ab8-4308-aa00-f6c1c4f57ec2" />
-
-* Chuyển /bin/sh\0 thành số nguyên ko dấu rồi gửi vào thanh ghi nào đó
-
-* Cách viết shellcode : <img width="683" height="403" alt="image" src="https://github.com/user-attachments/assets/3d760efd-6a65-48ca-aa8e-0ddb837e68e1" />
-
-
 # Gadget<Tìm đoạn gadget nhỏ>:
 
 `ROPgadget --binary <tên file> | grep "<đoạn cần tìm>"`
@@ -288,3 +275,17 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 # Gặp các bài chặn một số byte của shellcode : 
 
 - Vào `python3` -> `context.arch = 'amd64'` -> `print(asm("code shellcode").hex())` để chuyển thành byte thô rồi so với các byte bị chặn -> biết lệnh nào bị chặn -> fix lệnh đó
+
+# Bypass khi opcode 0x0f05 `syscall` bị chặn :
+
+<img width="272" height="172" alt="image" src="https://github.com/user-attachments/assets/d9a83692-906c-4341-966a-a92b2b2d8548" />
+
+<img width="528" height="99" alt="image" src="https://github.com/user-attachments/assets/5e075549-387d-41ac-85bc-431ee3fb399b" />
+
+- Gán địa chỉ `sys_call + 1byte` là `0x04` vào rbx sau đó cộng 1 đơn vị thành `0x05` -> bypass thành công
+
+- Bắt buộc phải có `[rip + label]` để có thể tìm thấy `label`
+
+# Reverse shell :
+
+<img width="1475" height="1218" alt="image" src="https://github.com/user-attachments/assets/e0fb4282-da69-474a-9567-df06bddd80b3" />
