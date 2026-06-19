@@ -291,3 +291,11 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 <img width="1475" height="1218" alt="image" src="https://github.com/user-attachments/assets/e0fb4282-da69-474a-9567-df06bddd80b3" />
 
 # environ : Thuộc libc trỏ tới stack
+
+# HEAP :
+
+- `heap chunks` : Các trunk được khởi tạo
+
+- `heap chunk <address>` : thông tin của trunk đó
+
+- `heap bin` : Xem các bin (là chỗ để lưu trữ các chunk sau khi bị `free`)
