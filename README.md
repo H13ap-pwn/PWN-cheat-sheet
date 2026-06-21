@@ -294,8 +294,18 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # HEAP :
 
-- `heap chunks` : Các trunk được khởi tạo
+- `heap chunks` : Các chunk được khởi tạo
 
-- `heap chunk <address>` : thông tin của trunk đó
+- `heap chunk <address>` : thông tin của chunk đó
 
 - `heap bin` : Xem các bin (là chỗ để lưu trữ các chunk sau khi bị `free`)
+
+- Cấu trúc 1 chunk :
+  + 0x10 byte đầu : `meta data`(8byte đầu là `size chunk prev`, 8byte sau là `size chunk hiện tại`)
+  + Sau đó là : `content`
+ 
+- Bin (Vùng chứa chunk sau khi `free`) :
+  + Tcache bin : chứa tối đa 7chunk, size max: 0x410
+  + Fastbin : Chứa chunk size từ 0x20 -> 0x80
+  + Unsorted bin : Cấu trúc DSLK đôi, trỏ forward, backword
+  + Large/Small bin : Chia ra từ unsorted bin
