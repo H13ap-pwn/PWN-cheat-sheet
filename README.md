@@ -309,3 +309,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
   + Fastbin : Chứa chunk size từ 0x20 -> 0x80
   + Unsorted bin : Cấu trúc DSLK đôi, trỏ forward, backword
   + Large/Small bin : Chia ra từ unsorted bin
+
+# Use-after-free : 
+
+- Sau khi `free` mà ko cho con trỏ ấy về `NULL` thì khi `malloc()` một vùng mới có size giống thế sẽ tái sử dụng vùng nhớ đã bị `free` để exploit
