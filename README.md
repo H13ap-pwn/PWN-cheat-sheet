@@ -294,6 +294,8 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # HEAP :
 
+- `vis` : Xem các chunk
+
 - `heap chunks` : Các chunk được khởi tạo
 
 - `heap chunk <address>` : thông tin của chunk đó
