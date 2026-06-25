@@ -315,3 +315,6 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 # Use-after-free : 
 
 - Sau khi `free` mà ko cho con trỏ ấy về `NULL` thì khi `malloc()` một vùng mới có size giống thế sẽ tái sử dụng vùng nhớ đã bị `free` để exploit
+
+- Sau `free()` chunk chứa : `forward pointer`(Trỏ đến chunk sau) & `key`(Check `double free`) thay vì meta data & content như trước
+
