@@ -318,5 +318,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # Double-free :
 
+- `Free` 2 lần 1 chunk khiến nó tự trỏ nó (lưu ý trước khi free lần 2 cần đổi key)
+
 - Sau `free()` chunk chứa : `forward pointer`(Trỏ đến chunk sau) & `key`(Check `double free`) & phần content sót lại thay vì chỉ content như trước
 
