@@ -322,3 +322,6 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - Sau `free()` chunk chứa : `forward pointer`(Trỏ đến chunk sau) & `key`(Check `double free`) & phần content sót lại thay vì chỉ content như trước
 
+# Tcache Poisioning :
+
+- Thay đổi các `forward pointer` của các chunk sau `free` ở tcache
