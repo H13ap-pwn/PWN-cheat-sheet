@@ -325,3 +325,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 # Tcache Poisioning :
 
 - Thay đổi các `forward pointer` của các chunk sau `free` ở tcache
+
+# Cách từ *ptr search lại ptr : 
+
+- `search -p <*ptr>` 
